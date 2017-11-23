@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Wilson Martinez">
+    <meta name="description" content="Hoja de vida de Wilson Martinez Barrera">
+    <meta name="keywords" content="Hoja de vida, Wilson Martinez Barrera, NextU">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Wilson Ram&oacute;n Mart&iacute;z Barrera</title>
+  </head>
+  <body>
+    <header>
+      <svg width="200px" height="200px" viewBox="0 0 200 200">
+        <image width="200px" height="200px" xlink:href="media/img/logoWMB.svg" />
+      </svg>
+      <h1>Hoja de Vida</h1>
+      <h2>Datos Personales</h2>
+      <dl>
+        <dt><h2>Nombres:</h2></dt>
+        <dd>Wilson Ram&oacute;n</dd>
+        <dt><h2>Apellidos:</h2></dt>
+        <dd>Mart&iacute;nez Barrera</dd>
+        <dt><h3>Fecha y lugar de nacimiento:</h3></dt>
+        <dd>30 de Septiembre de 1989 - Bogot&aacute; D.C. - Colombia</dd>
+      </dl>
+    </header><nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Educaci&oacute;n</a></li>
+        <li><a href="experiencia.html">Experiencia</a></li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <hr>
+        <h2>Educación</h2>
+        <table align="center" border="1" cellpadding="5" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Año</th>
+              <th>Instituci&oacute;n</th>
+              <th>Lugar</th>
+              <th>¿Culmin&oacute;?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2006</td>
+              <td>Colegio Agustiniano Norte</td>
+              <td>Bogot&aacute; D.C.</td>
+              <td>SI</td>
+            </tr>
+            <tr>
+              <td>2014</td>
+              <td>Universidad Distrital Francisco Jos&eacute; de Caldas</td>
+              <td>Bogot&aacute; D.C.</td>
+              <td>SI</td>
+            </tr>
+            <tr>
+              <td>2016</td>
+              <td>Next University</td>
+              <td>Bogot&aacute; D.C.</td>
+              <td>NO</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article>
+        <h2>Agregar Estudios</h2>
+        <form action="educacion.html" method="get">
+          <fieldset>
+            <legend>Ingrese la informaci&oacute;n del estudio: </legend>
+            <label for="selectAnioEstudio"><strong>Año: </strong></label>
+            <select id="selectAnioEstudio">
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+            </select>
+            <br>
+            <label for="txtInstitucion"><strong>Instituci&oacute;n: </strong></label>
+            <input type="text" id="selectAnioEstudio" value="" required>
+            <br>
+            <label for="taLugar"><strong>Lugar: </strong></label>
+            <textarea id="taLugar" rows="1" cols="50" required></textarea>
+            <br>
+            <label for="culminoRB"><strong>¿Culmin&oacute?: </strong></label>
+            <input id="culminoRB" type="radio" name="culminoRB" value="SI" checked> SI
+            <input type="radio" name="culminoRB" value="NO"> NO<br>
+            <br>
+            <input type="submit" value="Enviar">
+          </fieldset>
+        </form>
+      </article>
+    </section>
+    <hr>
+    <footer>
+      <strong>@Derechos Reservados</strong>
+      <ul>
+        <li><strong>Email: </strong><a href="mailto:wilsonmb89@hotmail.com">wilsonmb89@hotmail.com</a></li>
+        <li><strong>Tel&eacute;fono: </strong>123456789</li>
+        <li><strong>Direcci&oacute;n: </strong>Calle Falsa #123</li>
+      </ul>
+    </footer>
+  </body>
+</html>
