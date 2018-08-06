@@ -74,4 +74,103 @@ public class PryTrainingPragma {
     	}
     	return nivelInicial;
     }
+    
+    public int solution3(int[] a, int X, int D){
+    	int minTime = 0;
+    	if(D < X){
+    		minTime = -1;
+    		for(int second = 0 ; second < a.length; second++){
+    			if((D + a[second]) >= X){
+    				minTime = second;
+    				break;
+    			}
+    		}
+    	}
+    	return minTime;
+    }
+    
+    public int solution4(int N, int M){
+    	int mcd = 0, divisor = 0, dividendo = 0, residuo = 0;
+    	divisor = N >= M ? N : M;
+    	dividendo = N <= M ? N : M;
+    	do{
+    		residuo = divisor % dividendo;
+    		mcd = dividendo;
+    		divisor = dividendo;
+    		dividendo = residuo;
+    	}while(residuo != 0);
+    	return mcd;
+    }
+    
+    public int solution5(int[][] A){
+    	int paises = 0;
+    	int[][][] mapaAux = new int[A.length][A[0].length][2];
+    	for(int x = 0; x < mapaAux.length ; x++){
+    		for(int y = 0; y < mapaAux[x].length ; y++){
+    			mapaAux[x][y][0] = A[x][y];
+    			mapaAux[x][y][1] = 0;
+    		}
+    	}
+    	for(int x = 0; x < mapaAux.length ; x++){
+    		for(int y = 0; y < mapaAux[x].length ; y++){
+    			if(x-1 >= 0){
+    				if(mapaAux[x-1][y][0] == mapaAux[x][y][0]){
+    					if(mapaAux[x-1][y][1] != 0){
+    						mapaAux[x][y][1] = mapaAux[x-1][y][1];
+    					}else if(mapaAux[x][y][1] != 0){
+    						mapaAux[x-1][y][1] = mapaAux[x][y][1];
+    					}else{
+    						paises++;
+    						mapaAux[x-1][y][1] = paises;
+    						mapaAux[x][y][1] = paises;
+    					}
+    				}
+    			}
+    			if(x+1 < mapaAux.length){
+    				if(mapaAux[x+1][y][0] == mapaAux[x][y][0]){
+    					if(mapaAux[x+1][y][1] != 0){
+    						mapaAux[x][y][1] = mapaAux[x+1][y][1];
+    					}else if(mapaAux[x][y][1] != 0){
+    						mapaAux[x+1][y][1] = mapaAux[x][y][1];
+    					}else{
+    						paises++;
+    						mapaAux[x+1][y][1] = paises;
+    						mapaAux[x][y][1] = paises;
+    					}
+    				}
+				}
+    			if(y-1 >= 0){
+    				if(mapaAux[x][y-1][0] == mapaAux[x][y][0]){
+    					if(mapaAux[x][y-1][1] != 0){
+    						mapaAux[x][y][1] = mapaAux[x][y-1][1];
+    					}else if(mapaAux[x][y][1] != 0){
+    						mapaAux[x][y-1][1] = mapaAux[x][y][1];
+    					}else{
+    						paises++;
+    						mapaAux[x][y-1][1] = paises;
+    						mapaAux[x][y][1] = paises;
+    					}
+    				}
+    			}
+    			if(y+1 < mapaAux[x].length){
+    				if(mapaAux[x][y+1][0] == mapaAux[x][y][0]){
+    					if(mapaAux[x][y+1][1] != 0){
+    						mapaAux[x][y][1] = mapaAux[x][y+1][1];
+    					}else if(mapaAux[x][y][1] != 0){
+    						mapaAux[x][y+1][1] = mapaAux[x][y][1];
+    					}else{
+    						paises++;
+    						mapaAux[x][y+1][1] = paises;
+    						mapaAux[x][y][1] = paises;
+    					}
+    				}
+    			}
+    			if(mapaAux[x][y][1] == 0){
+    				paises++;
+					mapaAux[x][y][1] = paises;
+    			}
+    		}
+    	}
+    	return paises;
+    }
 }
