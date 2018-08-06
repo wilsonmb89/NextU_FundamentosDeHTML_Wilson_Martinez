@@ -16,7 +16,12 @@ public class PryTrainingPragma {
      */
     public static void main(String[] args) {
         PryTrainingPragma hola = new PryTrainingPragma();
-        System.out.println("Max: " + hola.solution1(new int[]{1,3,-3}));
+        //System.out.println("Times bulbs on: " + pruebas.solution(new int[]{6,1,5,2,4,3}));
+        //System.out.println("Max: " + pruebas.solution1(new int[]{-8,4,0,5,-3,6}));
+        //System.out.println("Resp: " + pruebas.solution2(20));
+        //System.out.println("Min time: " + pruebas.solution3(new int[]{1,3,1,2,2,2}, 7, 3));
+        //System.out.println("MCD: " + pruebas.solution4(2366, 273));
+		System.out.println(pruebas.solution5(new int[][]{{3,3,2},{3,1,2},{4,4,2},{6,5,6}}));
     }
     
     public int solution(int[] a){
