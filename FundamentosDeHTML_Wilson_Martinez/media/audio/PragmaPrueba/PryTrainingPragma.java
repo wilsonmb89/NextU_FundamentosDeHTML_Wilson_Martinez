@@ -59,4 +59,19 @@ public class PryTrainingPragma {
         }
         return maxVal;
     }
+    
+     public int solution2(int a){
+    	int maxVal = 2, pivote = 1, currSum = 0, nivelInicial = 0;
+    	if(a <= 1){
+    		nivelInicial = a;
+    	}else{
+    		while(currSum <= a){
+    			currSum = maxVal + pivote;
+    			maxVal++;
+    			pivote = currSum;
+    			nivelInicial++;
+    		}
+    	}
+    	return nivelInicial;
+    }
 }
